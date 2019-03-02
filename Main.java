@@ -61,7 +61,6 @@ public class Main
     }
     public static void main(String [] args) throws Exception
     {
-        int mb = 1024*1024;
         int gb = 1024*1024*1024;
         /* PHYSICAL MEMORY USAGE */
         com.sun.management.OperatingSystemMXBean os = (com.sun.management.OperatingSystemMXBean)
