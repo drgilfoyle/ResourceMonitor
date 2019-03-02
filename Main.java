@@ -62,16 +62,15 @@ public class Main
     public static void main(String [] args) throws Exception
     {
         int gb = 1024*1024*1024;
-        /* PHYSICAL MEMORY USAGE */
         com.sun.management.OperatingSystemMXBean os = (com.sun.management.OperatingSystemMXBean)
                 java.lang.management.ManagementFactory.getOperatingSystemMXBean();
         long physicalMemorySize = os.getTotalPhysicalMemorySize();
         System.out.println("IP Details\n");
-        System.out.println("Your IP is " +InetAddress.getLocalHost());
+        System.out.println("Your IP is " +InetAddress.getLocalHost()); //Grabs the computers IP and Hostname (Bill-PC/192.168.1.123)
         System.out.println("\n--");
         System.out.println("RAM Details\n");
-        System.out.println("Total  : " + physicalMemorySize / gb + " GB ");
-        long physicalfreeMemorySize = os.getFreePhysicalMemorySize();
+        System.out.println("Total  : " + physicalMemorySize / gb + " GB "); //Grabs the total amount of RAM in the system and prints it
+        long physicalfreeMemorySize = os.getFreePhysicalMemorySize(); //Grabs the current
         System.out.println("Usable : " + physicalfreeMemorySize / gb + "  GB");
         if (physicalfreeMemorySize >= physicalMemorySize || physicalfreeMemorySize > physicalMemorySize%10) {
             System.out.println("\nWARNING!!! you are running low on RAM, close some programs or close some Chrome tabs!");
