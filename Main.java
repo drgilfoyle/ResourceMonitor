@@ -11,7 +11,6 @@ public class Main
     public static void printUsage(Runtime runtime)
     {
         long total, free, used; //defines the variables
-        int mb = 1024*1024; //defines what a MB is
         int gb = 1024*1024*1024; //defines a GB
 
         total = runtime.totalMemory(); //Defines total memory
@@ -68,8 +67,6 @@ public class Main
         com.sun.management.OperatingSystemMXBean os = (com.sun.management.OperatingSystemMXBean)
                 java.lang.management.ManagementFactory.getOperatingSystemMXBean();
         long physicalMemorySize = os.getTotalPhysicalMemorySize();
-        System.out.println("OS Information");
-
         System.out.println("IP Details\n");
         System.out.println("Your IP is " +InetAddress.getLocalHost());
         System.out.println("\n--");
