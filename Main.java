@@ -81,8 +81,6 @@ public class Main
         /* DISC SPACE DETAILS */
         File diskPartition = new File("C:");
         File diskPartition1 = new File("D:");
-        File diskPartition2 = new File("E:");
-        File diskPartition3 = new File()
         long totalCapacity = diskPartition.getTotalSpace() / gb;
         long totalCapacity1 = diskPartition1.getTotalSpace() / gb;
         float freePartitionSpace = diskPartition.getFreeSpace() / gb;
