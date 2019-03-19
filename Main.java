@@ -11,7 +11,7 @@ public class Main
     public static void printUsage(Runtime runtime)
     {
         long total, free, used; //defines the variables
-        int gb = 1024*1024*1024; //defines a GB
+        int gb = 1024*1024*1024; //defines what a GB is
 
         total = runtime.totalMemory(); //Defines total memory
         free = runtime.freeMemory(); //Defines free memory
